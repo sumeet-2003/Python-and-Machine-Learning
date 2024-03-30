@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #38b000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Classification</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="imagefile"><br><br>
+        <input type="submit" class="btn" value="Upload">
+    </form>
+    <<div id="prediction_result" style="text-align:center;font-weight:bold">
+        {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div><br>
+    
+    <div style="text-align: center;">
+        <a href="/info" style="text-decoration: none; color: black;">
+            Click here to know the causes and prevention of the disease <br><br>
+            <div class="btn" style="margin-right: 43rem; margin-left: 43rem;" >
+                Click Here
+            </div>
+        </a>
+    </div>
+
+</html>
