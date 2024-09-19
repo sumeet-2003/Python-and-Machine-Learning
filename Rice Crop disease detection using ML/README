@@ -1,1 +1,4 @@
 SERVER IS BUILT ON 'FLASK' TO RUN THE WEBPAGE JUST RUN THE SERVER AND FOLLOW THE LINK.
+The VGG16 pre-built model is used in this project and the current accuracy is 82%.
+
+The model is not deployed globally but can be run on the localhost flask server.
